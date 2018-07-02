@@ -11,8 +11,8 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Update the description of the repository
 - [ ] Update logos and references to `[Project]` and `[my-snap-name]`
 - [ ] Create a snap that runs in `devmode`
-- [ ] Register the snap in the store, **using the preferred upstream name**(i.e. without personal postfix).  If the preferred upstream name is not available or reserved, file a request to take over the preferred upstream name and temporary use a name with personal postfix instead.
 - [ ] Add a screenshot to this `README.md`
+- [ ] Register the snap in the store, **using the preferred upstream name**(i.e. without personal postfix).  If the preferred upstream name is not available or reserved, file a request to take over the preferred upstream name and temporary use a name with personal postfix instead.
 - [ ] Publish the `devmode` snap in the Snap store edge channel
 - [ ] Add install instructions to this `README.md`
 - [ ] Update snap store metadata, icons and screenshots
