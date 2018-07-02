@@ -1,11 +1,9 @@
-<h1 align="center">
-  <img src="https://avatars1.githubusercontent.com/u/29598503?v=3&s=256" alt="Project">
-  <br />
-  [Project]
-</h1>
+# Snap Packaging for [Project]
 
-<p align="center"><b>This is the snap for [Project]</b>, <i>"Single-line elevator pitch for your amazing snap"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
-distributions.</p>
+  ![Icon of [Project]](gui/icon.png "Icon of [Project]")
+
+
+**This is the snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
 <!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
@@ -13,14 +11,31 @@ distributions.</p>
 </p>
 -->
 
+<!-- Uncomment and modify this when you have a screenshot
+![Screenshot of the Snapped Application](snap/screenshots/screenshot.png "Screenshot of the Snapped Application")
+-->
+
+Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
+
 ## Installation (not available yet)
 
-    sudo snap install my-snap-name
+    # Install Snap
+    sudo snap install --channel=edge --devmode my-snap-name
+    #sudo snap install --channel=beta my-snap-name
+    #sudo snap install my-snap-name
+    
+    # Connect the Snap to Required Interfaces
+    sudo snap connect my-snap-name:plug-name core:slot-name
+    
+    # Connect the Snap to Optional Interfaces
+    sudo snap connect my-snap-name:plug-name core:slot-name
+    
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
-<!-- Uncomment and modify this when you have a screenshot
-![my-snap-name](screenshot.png?raw=true "my-snap-name")
--->
+## What is Working
 
-<p align="center">Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with :gift_heart: by Snapcrafters</p>
+## What is NOT Working...yet 
+
+## Security Confinement Information
+
