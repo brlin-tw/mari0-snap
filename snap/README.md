@@ -35,7 +35,19 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ## What is Working
 
+* A list of functionallities that are verified working
+
 ## What is NOT Working...yet 
 
+* A list of functionallities that are verified not working
+
+## What is NOT Tested...yet
+
+* A list of functionallities that are not tested for any reasons.
+
 ## Security Confinement Information
+
+### _interface_name_ (autoconnect?)
+
+[Reason of asserting this interface]
 
