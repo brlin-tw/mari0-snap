@@ -13,7 +13,7 @@ distributions.</p>
 </p>
 -->
 
-## Install
+## Installation (not available yet)
 
     sudo snap install my-snap-name
 
