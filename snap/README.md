@@ -47,7 +47,7 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ## Security Confinement Information
 
-### _interface_name_ (autoconnect?)
+### _interface_name_ (non-autoconnect?)
 
 [Reason of asserting this interface]
 
