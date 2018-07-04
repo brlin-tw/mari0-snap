@@ -51,3 +51,6 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 [Reason of asserting this interface]
 
+## Support
+
+* [A list of support channels.]
