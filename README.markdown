@@ -5,7 +5,7 @@ This is the unofficial snap packaging of [Project], [Snaps are universal Linux p
 
 Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/snapcrafters/fork-and-rename-me/blob/master/snap/snapcraft.yaml) upstream so [Project] can authoritatively publish future releases.
 
-- [x] *Import* the [Snapcrafters template](https://github.com/snapcrafters/fork-and-rename-me) repository to your own GitHub account and name it as _snap_name_-snap (or any valid name you prefer) using GitHub's [Import repository](https://github.com/new/import) feature
+- [x] *Import* the [Snapcrafters Template Plus](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus) repository to your own GitHub account and name it as _snap_name_-snap (or any valid name you prefer) using GitHub's [Import repository](https://github.com/new/import) feature
   - It is recommended to *avoid forking the template repository* unless you're working on the template itself because you can only fork a repository once
 - [ ] Update the description of the repository
 - [ ] Update logos and references to `[Project]` and `[my-snap-name]` in `README.markdown` and `snap/README.md`
