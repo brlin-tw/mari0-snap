@@ -9,6 +9,8 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] *Import* the [Snapcrafters template](https://github.com/snapcrafters/fork-and-rename-me) repository to your own GitHub account and name it as _snap_name_-snap (or any valid name you prefer) using GitHub's [Import repository](https://github.com/new/import) feature
   - It is recommended to *avoid forking the template repository* unless you're working on the template itself because you can only fork a repository once
 - [ ] Update the description of the repository
+- [ ] Replace `Snapcrafters Template Plus` first level header to `Snap Packaging of [Project]`
+- [ ] Replace project description under first level header to customize toward your snap packaging
 - [ ] Update logos and references to `[Project]` and `[my-snap-name]`
 - [ ] Create a snap that runs in `devmode`
 - [ ] Add a screenshot to `snap/README.md`
