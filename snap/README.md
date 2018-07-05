@@ -17,17 +17,17 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ## Installation (not available yet)
 
-    # Install Snap
+    # Install Snap #
     sudo snap install --channel=edge --devmode my-snap-name
     #sudo snap install --channel=beta my-snap-name
     #sudo snap install my-snap-name
     
-    # Connect the Snap to Required Interfaces
-    ## _plug_name_: Reasoning of connecting _plug_name_
+    # Connect the Snap to Required Interfaces #
+    ## _plug_name_: Reasoning of connecting _plug_name_ ##
     sudo snap connect my-snap-name:_plug_name_
     
-    # Connect the Snap to Optional Interfaces
-    ## _plug_name_: Reasoning of connecting _plug_name_
+    # Connect the Snap to Optional Interfaces #
+    ## _plug_name_: Reasoning of connecting _plug_name_ ##
     sudo snap connect my-snap-name:_plug_name_
 
 
