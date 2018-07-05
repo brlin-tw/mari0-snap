@@ -31,12 +31,6 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
-## Security Confinement Information
-
-### _[interface_name]_ (non-autoconnect?)
-
-[Reason of asserting this interface]
-
 ## What is Working
 
 * [A list of functionallities that are verified working]
