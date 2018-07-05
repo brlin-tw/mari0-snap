@@ -4,7 +4,6 @@ This is the unofficial snap packaging of [Project], [Snaps are universal Linux p
 Refer [snap/README.md](snap/README.md) for user-oriented information.
 
 ## Remaining Tasks
-
 Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/blob/master/snap/snapcraft.yaml) upstream so [Project] can authoritatively publish future releases.
 
 - [x] *Import* the [Snapcrafters Template Plus](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus) repository to your own GitHub account and name it as _snap_name_-snap (or any valid name you prefer) using GitHub's [Import repository](https://github.com/new/import) feature
@@ -39,7 +38,6 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 <!-- 
 
 ## The Snapcrafters
-
 | [![Your Name](http://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/yourname/) |
 | :----------------------------------------------------------: |
 |          [Your Name](https://github.com/yourname/)           |
@@ -49,7 +47,6 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 <!-- Uncomment and modify this when you have upstream contacts
 
 ## Upstream
-
 | [![Upstream Name](http://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431?s=128)](https://github.com/upstreamname) |
 | :----------------------------------------------------------: |
 |       [Upstream Name](https://github.com/upstreamname)       |
