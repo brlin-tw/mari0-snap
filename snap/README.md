@@ -23,10 +23,10 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     #sudo snap install my-snap-name
     
     # Connect the Snap to Required Interfaces
-    sudo snap connect my-snap-name:plug-name core:slot-name
+    sudo snap connect my-snap-name:plug-name
     
     # Connect the Snap to Optional Interfaces
-    sudo snap connect my-snap-name:plug-name core:slot-name
+    sudo snap connect my-snap-name:plug-name
 
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
