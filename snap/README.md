@@ -6,9 +6,7 @@
 **This is the snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
 <!-- Uncomment and modify this when you are provided a build status badge
-<p align="center">
-<a href="https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me"><img src="https://build.snapcraft.io/badge/snapcrafters/fork-and-rename-me.svg" alt="Snap Status"></a>
-</p>
+[![Snap Status](https://build.snapcraft.io/badge/snapcrafters/fork-and-rename-me.svg)](https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me)
 -->
 
 <!-- Uncomment and modify this when you have a screenshot
