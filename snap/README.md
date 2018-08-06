@@ -16,6 +16,7 @@
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
 ## Installation (not available yet)
+([Don't have the `snap` command installed?](https://snapcraft.io/docs/core/install))
 
     # Install Snap #
     sudo snap install --channel=edge --devmode my-snap-name
@@ -29,9 +30,6 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     # Connect the Snap to Optional Interfaces #
     ## _plug_name_: Reasoning of connecting _plug_name_ ##
     sudo snap connect my-snap-name:_plug_name_
-
-
-([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
 ## What is Working
 
