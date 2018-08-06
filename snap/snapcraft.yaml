@@ -20,6 +20,7 @@ apps:
     #- desktop-legacy
     #- x11
     #- unity7
+    #- wayland
 
     #slots:
 
