@@ -10,4 +10,5 @@ set \
 # Make necessary runtime changes to make the snap work
 #export IMPORTANT_ENVIRONMENT_VARIABLE=value
 
-exec "${@}"
+# Finally run the launching command
+#my-app-command
