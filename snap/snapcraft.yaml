@@ -25,6 +25,25 @@ apps:
     #slots:
 
 parts:
+  # Launchers to fix the runtime environment to make the snap works
+  launchers:
+    source: snap/launchers
+    source-type: local
+    plugin: dump
+
+    override-build: |
+      set -eu
+
+      mkdir \
+        --parents \
+        "$SNAPCRAFT_PART_INSTALL"/bin
+      cp \
+        --force \
+        --verbose \
+        *-launch \
+        "$SNAPCRAFT_PART_INSTALL"/bin \
+        || true # Allow shipping no launchers
+
   # Patches to make the snap working if it can't be solved via launchers
   patches:
     source: snap/patches
@@ -51,6 +70,25 @@ parts:
         || true # Empty patches folder is allowed
     stage:
     - patches/*
+    override-prime: 'true'
+
+  # Helper programs to aid in certain part of snap building, like a install program for a certain part
+  utilities:
+    source: snap/utilities
+    override-pull: |
+      set -eu
+
+      snapcraftctl pull
+
+      mkdir \
+        --parents \
+        utilities
+      mv \
+        *.bash \
+        utilities \
+        || true # It is OK if nothing is in the directory
+
+    plugin: dump
     override-prime: 'true'
 
   my-app:
