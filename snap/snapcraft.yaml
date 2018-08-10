@@ -93,7 +93,9 @@ parts:
     plugin: dump
 
     override-build: |
-      set -eu
+      set \
+        -o errexit \
+        -o nounset
 
       mkdir \
         --parents \
@@ -119,7 +121,9 @@ parts:
     plugin: dump
 
     override-build: |
-      set -eu
+      set \
+        -o errexit \
+        -o nounset
 
       mkdir \
         --parents \
@@ -151,7 +155,9 @@ parts:
     plugin: dump
 
     override-build: |
-      set -eu
+      set \
+        -o errexit \
+        -o nounset
 
       mkdir \
         --parents \
@@ -190,7 +196,9 @@ parts:
     plugin: nil
 
     override-stage: |
-      set -eu
+      set \
+        -o errexit \
+        -o nounset
 
       snapcraftctl stage
 
