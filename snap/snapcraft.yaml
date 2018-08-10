@@ -1,3 +1,18 @@
+%YAML 1.2
+---
+# Snapcraft Recipe for [Project]
+# ------------------------------
+# This file is in the YAML data serialization format:
+# http://yaml.org
+# Refer the snapcraft syntax for the spec. of writing this file
+# https://docs.snapcraft.io/build-snaps/syntax
+
+# All following comments, including this one, are designed to be stripped
+# before contributing the recipe to the upstream
+
+# my-snap-name, my-app-name, my-app-command, my-app-launch, my-app-part
+# are placeholders text meant to be replaced by appropriate content
+
 name: my-snap-name
 summary: Single-line elevator pitch for your amazing snap under 79 chars.
 description: |
@@ -47,9 +62,12 @@ grade: devel
 icon: snap/gui/icon.png
 
 apps:
-  my-app:
-    command: my-app
-    desktop: share/applications/my-app.desktop
+  # If the my-app-name is identical with the my-snap-name it can be directly run
+  # with `my-snap-name` or `snap run my-snap-name`, otherwise it can only be run
+  # via `snap run my-snap-name.my-app-name` in the terminal.
+  my-app-name:
+    command: my-app-launch my-app-command
+    desktop: share/applications/my-app-name.desktop
     #plugs:
     #- desktop
     #- desktop-legacy
@@ -122,7 +140,7 @@ parts:
     plugin: dump
     override-prime: 'true'
 
-  my-app:
+  my-app-part:
     after:
     - patches
 
