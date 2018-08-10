@@ -61,6 +61,7 @@ version-script: |
       describe \
       --abbrev=4 \
       --always \
+      --exclude '*' \
       --dirty=-d
   )"
 
