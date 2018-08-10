@@ -96,13 +96,20 @@ parts:
 
       mkdir \
         --parents \
-        "$SNAPCRAFT_PART_INSTALL"/bin
-      cp \
-        --force \
-        --verbose \
-        *-launch \
-        "$SNAPCRAFT_PART_INSTALL"/bin \
-        || true # Allow shipping no launchers
+        "${SNAPCRAFT_PART_INSTALL}"/bin
+      find \
+        . \
+        -type f \
+        -perm /111 \
+        -print0 \
+        | xargs \
+          --no-run-if-empty \
+          --null \
+          --verbose \
+          -I{} \
+          cp \
+          {} \
+          "${SNAPCRAFT_PART_INSTALL}"/bin
 
   # Patches to make the snap working if it can't be solved via launchers
   patches:
@@ -113,17 +120,25 @@ parts:
     override-build: |
       set -eu
 
-      snapcraftctl build
-
       mkdir \
         --parents \
         "$SNAPCRAFT_PART_INSTALL"/patches
-      mv \
-        "$SNAPCRAFT_PART_INSTALL"/*.diff \
-        "$SNAPCRAFT_PART_INSTALL"/*.patch \
-        "$SNAPCRAFT_PART_INSTALL"/*.sed \
-        "$SNAPCRAFT_PART_INSTALL"/patches \
-        || true # Empty patches folder is allowed
+      find \
+        . \
+        -type f \
+        -and \
+        -not \
+        -name README.md \
+        -print0 \
+        | xargs \
+          --no-run-if-empty \
+          --null \
+          --verbose \
+          -I{} \
+          cp \
+          {} \
+          "${SNAPCRAFT_PART_INSTALL}"/patches
+
     stage:
     - patches/*
     override-prime: 'true'
@@ -131,20 +146,30 @@ parts:
   # Helper programs to aid in certain part of snap building, like a install program for a certain part
   utilities:
     source: snap/utilities
-    override-pull: |
-      set -eu
+    source-type: local
+    plugin: dump
 
-      snapcraftctl pull
+    override-build: |
+      set -eu
 
       mkdir \
         --parents \
-        utilities
-      mv \
-        *.bash \
-        utilities \
-        || true # It is OK if nothing is in the directory
-
-    plugin: dump
+        "$SNAPCRAFT_PART_INSTALL"/utilities
+      find \
+        . \
+        -type f \
+        -and \
+        -not \
+        -name README.md \
+        -print0 \
+        | xargs \
+          --no-run-if-empty \
+          --null \
+          --verbose \
+          -I{} \
+          cp \
+          {} \
+          "${SNAPCRAFT_PART_INSTALL}"/utilities
     override-prime: 'true'
 
   my-app-part:
@@ -168,7 +193,14 @@ parts:
 
       snapcraftctl stage
 
-      sed \
-        --file "${SNAPCRAFT_STAGE}"/patches/patch-desktop-entries.sed \
-        --in-place \
-        "${SNAPCRAFT_STAGE}"/share/applications/*.desktop
+      find \
+        "${SNAPCRAFT_STAGE}"/share/applications \
+        -name '*.desktop' \
+        -print0 \
+        | xargs \
+          --no-run-if-empty \
+          --null \
+          --verbose \
+          sed \
+          --file "${SNAPCRAFT_STAGE}"/patches/patch-desktop-entries.sed \
+          --in-place
