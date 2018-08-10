@@ -17,14 +17,14 @@
 # All following comments, including this one, are designed to be stripped
 # before contributing the recipe to the upstream
 
-# my-snap-name, my-app-name, my-app-command, my-app-launch, my-app-part
+# my-awesome-snap, my-app-name, my-app-command, my-app-launch, my-app-part
 # are placeholders text meant to be replaced by appropriate content
 
-name: my-snap-name
+name: my-awesome-snap
 summary: Single-line elevator pitch for your amazing snap under 79 chars.
 description: |
-  This is my-snap's description. You have a paragraph or two to tell the
-  most important story about your snap. Keep it under 100 words though,
+  This is my-awesome-snap's description. You have a paragraph or two to tell
+  the most important story about your snap. Keep it under 100 words though,
   we live in tweetspace and your description wants to look good in the snap
   store.
 
@@ -72,9 +72,9 @@ grade: devel
 icon: snap/gui/icon.png
 
 apps:
-  # If the my-app-name is identical with the my-snap-name it can be directly run
-  # with `my-snap-name` or `snap run my-snap-name`, otherwise it can only be run
-  # via `snap run my-snap-name.my-app-name` in the terminal.
+  # If the my-app-name is identical with the my-awesome-snap it can be directly run
+  # with `my-awesome-snap` or `snap run my-awesome-snap`, otherwise it can only be run
+  # via `snap run my-awesome-snap.my-app-name` in the terminal.
   my-app-name:
     command: my-app-launch my-app-command
     #desktop: share/applications/my-app-name.desktop
