@@ -78,12 +78,12 @@ apps:
   my-app-name:
     command: my-app-launch
     #desktop: share/applications/my-app-name.desktop
-    #plugs:
-    #- desktop
-    #- desktop-legacy
-    #- x11
-    #- unity7
-    #- wayland
+    plugs:
+    - desktop
+    - desktop-legacy
+    - x11
+    - unity7
+    - wayland
 
     #slots:
 
@@ -180,6 +180,13 @@ parts:
           {} \
           "${SNAPCRAFT_PART_INSTALL}"/utilities
     override-prime: 'true'
+
+  yad:
+    after: desktop-gtk3
+
+    plugin: nil
+    stage-packages:
+    - yad
 
   my-app-part:
     after:
