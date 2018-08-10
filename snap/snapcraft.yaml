@@ -130,6 +130,13 @@ parts:
     after:
     - patches
 
+    # Run `snapcraft help sources` for supported keywords on pulling
+    # a part's source ingredients
+    #source:
+    #source-type:
+    #source-tag:
+    #source-depth:
+
     # Run `snapcraft plugins` for supported helper plugins
     # Run `snapcraft help plugins` for supported keywords on building
     # a part
