@@ -38,6 +38,7 @@ version: determined-by-version-script
 # (OPTIONAL) The version string can also be dynamically determined via scriping
 # , in this case the value of the `version` key will be ignored (but the key is
 # still required).
+# NOTE: The resulting version string cannot be longer than 32 characters
 #version-script: snap/utilites/set-snap-version.bash
 #version-script: git -C parts/my-app-part/src describe --always --dirty --tags
 version-script: |
