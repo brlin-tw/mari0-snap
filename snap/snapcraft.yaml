@@ -130,7 +130,9 @@ parts:
     after:
     - patches
 
-    # See 'snapcraft plugins'
+    # Run `snapcraft plugins` for supported helper plugins
+    # Run `snapcraft help plugins` for supported keywords on building
+    # a part
     plugin: nil
 
     override-stage: |
