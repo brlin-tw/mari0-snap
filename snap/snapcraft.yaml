@@ -25,7 +25,7 @@ apps:
     #slots:
 
 parts:
-  # Patches to fix other parts
+  # Patches to make the snap working if it can't be solved via launchers
   patches:
     source: snap/patches
     source-type: local
