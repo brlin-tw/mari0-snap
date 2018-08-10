@@ -74,7 +74,7 @@ apps:
   # via `snap run my-snap-name.my-app-name` in the terminal.
   my-app-name:
     command: my-app-launch my-app-command
-    desktop: share/applications/my-app-name.desktop
+    #desktop: share/applications/my-app-name.desktop
     #plugs:
     #- desktop
     #- desktop-legacy
