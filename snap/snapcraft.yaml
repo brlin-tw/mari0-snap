@@ -4,8 +4,15 @@
 # ------------------------------
 # This file is in the YAML data serialization format:
 # http://yaml.org
-# Refer the snapcraft syntax for the spec. of writing this file
-# https://docs.snapcraft.io/build-snaps/syntax
+# For the spec. of writing this file refer the following documentation:
+# * The snapcraft syntax
+#   https://docs.snapcraft.io/build-snaps/syntax
+# * Snap Docs
+#   https://snapdocs.labix.org/
+# * Latest doc topics in the Snapcraft Forum
+#   https://forum.snapcraft.io/c/doc
+# For support refer to the snapcraft section in the Snapcraft Forum:
+# https://forum.snapcraft.io/c/snapcraft
 
 # All following comments, including this one, are designed to be stripped
 # before contributing the recipe to the upstream
