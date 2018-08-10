@@ -38,7 +38,7 @@ version: determined-by-version-script
 # (OPTIONAL) The version string can also be dynamically determined via scriping
 # , in this case the value of the `version` key will be ignored (but the key is
 # still required).
-#version-string: snap/utilites/set-snap-version.bash
+#version-script: snap/utilites/set-snap-version.bash
 version-script: |
   set \
     -o errexit \
