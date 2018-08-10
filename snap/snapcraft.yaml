@@ -85,10 +85,6 @@ parts:
     source-type: local
     plugin: dump
 
-    # DISABLED: Bug #1775582 “`organize:{ /: another-dir/ }` causes the items under host root directory to be copied in another-dir” : Bugs : Snapcraft
-    # https://forum.snapcraft.io/t/organize-another-dir-causes-the-items-under-host-root-directory-to-be-copied-in-another-dir/5806
-    #organize:
-        #/: patches/
     override-build: |
       set -eu
 
