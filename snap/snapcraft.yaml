@@ -76,7 +76,7 @@ apps:
   # with `my-awesome-snap` or `snap run my-awesome-snap`, otherwise it can only be run
   # via `snap run my-awesome-snap.my-app-name` in the terminal.
   my-app-name:
-    command: my-app-launch
+    command: desktop-launch my-app-launch
     #desktop: share/applications/my-app-name.desktop
     plugs:
     - desktop
