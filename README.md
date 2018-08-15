@@ -1,5 +1,5 @@
-# Unofficial Snap Packaging of [Project]
-This is the unofficial snap packaging of [Project], [Snaps are universal Linux packages](https://snapcraft.io).
+# Unofficial Snap Packaging for [Project]
+This is the unofficial snap packaging for [Project], [Snaps are universal Linux packages](https://snapcraft.io).
 
 Refer [snap/README.md](snap/README.md) for user-oriented information.
 
