@@ -1,6 +1,6 @@
 # Snap Packaging for [Project]
 
-  ![Icon of [Project]](gui/icon.png "Icon of [Project]")
+![Icon of [Project]](gui/icon.png "Icon of [Project]")
 
 
 **This is the snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
@@ -32,17 +32,13 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     sudo snap connect my-snap-name:_plug_name_
 
 ## What is Working
-
 * [A list of functionallities that are verified working]
 
 ## What is NOT Working...yet 
-
 * [A list of functionallities that are verified not working]
 
 ## What is NOT Tested...yet
-
 * [A list of functionallities that are not tested for any reasons.]
 
 ## Support
-
 * [A list of support channels.]
