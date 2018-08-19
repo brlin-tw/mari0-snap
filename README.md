@@ -21,17 +21,22 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Publish the confined snap in the Snap store beta channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
-- [ ] Ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to fork your repo into github.com/snapcrafters, transfer the snap name from you to snapcrafters, and configure the repo for automatic publishing into edge on commit
 - [ ] Add the provided Snapcraft build badge to `snap/README.md`
 - [ ] Publish the snap in the Snap store stable channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
 - [ ] Submit a pull request or patch upstream that adds snap install documentation - [link]()
 - [ ] Submit a pull request or patch upstream that adds the `snapcraft.yaml` and any required assets/launchers - [link]()
-- If upstream accept the PR:
-  - [ ] Request upstream create a Snap store account
-  - [ ] Contact the Snap Advocacy team to request the snap be transferred to upstream
-- [ ] Ask the Snap Advocacy team to celebrate the snap - [link]()
+
+Depending on the upstream's response:
+
+- If the upstream accepts the PR:
+    - [ ] Request upstream create a Snap store account
+    - [ ] Contact the Snap Advocacy team to request the snap be transferred to upstream
+- If the upstream rejects the PR:
+    - [ ] Ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to fork your repo into github.com/snapcrafters, transfer the snap name from you to snapcrafters, and configure the repo for automatic publishing into edge on commit
+
+* [ ] Ask the Snap Advocacy team to celebrate the snap - [link]()
 
 If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft.io).
 
