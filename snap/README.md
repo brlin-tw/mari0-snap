@@ -38,5 +38,10 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 ## What is NOT Tested...yet
 * [A list of functionallities that are not tested for any reasons.]
 
+<!--
 ## Support
-* [A list of support channels.]
+* Report issues regarding using this snap to the issue tracker:  
+  <https://github.com/_repo_owner_/_repo_name_/issues>
+* You may also post on the Snapcraft Forum, under the `snap` topic category:  
+  <https://forum.snapcraft.io/c/snap>
+-->
