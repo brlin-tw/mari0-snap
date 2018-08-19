@@ -1,7 +1,5 @@
 # Snap Packaging for [Project]
-
 ![Icon of [Project]](gui/icon.png "Icon of [Project]")
-
 
 **This is the snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
