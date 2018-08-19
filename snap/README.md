@@ -1,7 +1,7 @@
-# Snap Packaging for [Project]
+# Unofficial Snap Packaging for [Project]
 ![Icon of [Project]](gui/icon.png "Icon of [Project]")
 
-**This is the snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
+**This is the unofficial snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
 <!-- Uncomment and modify this when you are provided a build status badge
 [![Build Status Badge of the `my-snap-name` Snap](https://build.snapcraft.io/badge/snapcrafters/fork-and-rename-me.svg "Build Status of the `my-snap-name` snap")](https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me)
