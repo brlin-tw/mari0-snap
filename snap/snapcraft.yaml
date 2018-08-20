@@ -35,7 +35,7 @@ description: |
 # https://arp242.net/weblog/yaml_probably_not_so_great_after_all.html#surprising-behaviour
 version: determined-by-version-script
 
-# (OPTIONAL) The version string can also be dynamically determined via scriping
+# (OPTIONAL) The version string can also be dynamically determined via scripting
 # , in this case the value of the `version` key will be ignored (but the key is
 # still required).
 # NOTE: The resulting version string cannot be longer than 32 characters
