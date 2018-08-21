@@ -5,6 +5,8 @@
 # This file is in the YAML data serialization format:
 # http://yaml.org
 # For the spec. of writing this file refer the following documentation:
+# * Snapcraft.yaml reference
+#   https://forum.snapcraft.io/t/snapcraft-yaml-reference/4276
 # * The snapcraft syntax
 #   https://docs.snapcraft.io/build-snaps/syntax
 # * Snap Docs
