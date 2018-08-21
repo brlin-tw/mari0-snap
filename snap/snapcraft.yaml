@@ -102,6 +102,8 @@ apps:
 # Run `snapcraft help sources` for supported keywords on pulling a part's source ingredients
 # Run `snapcraft plugins` for supported build helper plugins
 # Run `snapcraft help plugins` for supported keywords on building a part
+# For `override-*` scriptlets used to modify behavior of certain part's lifecycle phase, check out:
+# https://forum.snapcraft.io/t/scriptlets/4892
 parts:
   # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
   assets:
