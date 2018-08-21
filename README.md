@@ -25,7 +25,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
 - [ ] Publish the snap in the Snap store stable channel
 - [ ] Update the install instructions in `snap/README.md`
-- [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
+- [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Release-Announcement-Template) - [link]()
 - [ ] Submit a pull request or patch upstream that adds snap install documentation - [link]()
 - [ ] Submit a pull request or patch upstream that adds the `snapcraft.yaml` and any required assets/launchers - [link]()
 
