@@ -17,7 +17,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Publish the `devmode` snap in the Snap store edge channel
 - [ ] Add install instructions to `snap/README.md`
 - [ ] Update snap store metadata, icons and screenshots
-- [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate let the upstream acknowledge the effort - [link]()
+- [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link]()
 - [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
 - [ ] Publish the confined snap in the Snap store beta channel
 - [ ] Update the install instructions in `snap/README.md`
