@@ -71,27 +71,27 @@ version-script: |
 
 confinement: devmode # use 'strict' once you have the right plugs and slots
 grade: devel
-icon: snap/gui/icon.png
+icon: snap/gui/my-awesome-app.png
 
 apps:
   # If the my-app-name is identical with the my-awesome-app it can be directly run
   # with `my-awesome-app` or `snap run my-awesome-app`, otherwise it can only be run
   # via `snap run my-awesome-app.my-app-name` in the terminal.
   my-app-name:
-    command: desktop-launch my-app-launch
-    #desktop: share/applications/my-app-name.desktop
+    command: my-awesome-app-launch
+    desktop: share/applications/my-awesome-app.desktop
 
     # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
     # Interfaces - doc - snapcraft.io
     # https://forum.snapcraft.io/t/interfaces/6154
     # Non-A/C: Non-autoconnect interface
-    #plugs:
+    plugs:
     # For snaps with a graphical user interface:
-    #- desktop
-    #- desktop-legacy
-    #- x11
-    #- unity7
-    #- wayland
+    - desktop
+    - desktop-legacy
+    - x11
+    - unity7
+    - wayland
 
     # Storage access
     #- home
@@ -99,100 +99,27 @@ apps:
 
     #slots:
 
+# Run `snapcraft help sources` for supported keywords on pulling a part's source ingredients
+# Run `snapcraft plugins` for supported build helper plugins
+# Run `snapcraft help plugins` for supported keywords on building a part
 parts:
-  # Launchers to fix the runtime environment to make the snap works
-  launchers:
-    source: snap/launchers
+  # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
+  assets:
+    source: snap
     source-type: local
-    plugin: dump
+    plugin: nil
 
     override-build: |
       set \
         -o errexit \
         -o nounset
 
-      mkdir \
-        --parents \
-        "${SNAPCRAFT_PART_INSTALL}"/bin
-      find \
-        . \
-        -type f \
-        -perm /111 \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          -I{} \
-          cp \
-          {} \
-          "${SNAPCRAFT_PART_INSTALL}"/bin
+      ./utilities/install-assets.bash
+    prime:
+    - -utilities
+    - -patches
 
-  # Patches to make the snap working if it can't be solved via launchers
-  patches:
-    source: snap/patches
-    source-type: local
-    plugin: dump
-
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
-
-      mkdir \
-        --parents \
-        "$SNAPCRAFT_PART_INSTALL"/patches
-      find \
-        . \
-        -type f \
-        -and \
-        -not \
-        -name README.md \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          -I{} \
-          cp \
-          {} \
-          "${SNAPCRAFT_PART_INSTALL}"/patches
-
-    stage:
-    - patches/*
-    override-prime: 'true'
-
-  # Helper programs to aid in certain part of snap building, like a install program for a certain part
-  utilities:
-    source: snap/utilities
-    source-type: local
-    plugin: dump
-
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
-
-      mkdir \
-        --parents \
-        "$SNAPCRAFT_PART_INSTALL"/utilities
-      find \
-        . \
-        -type f \
-        -and \
-        -not \
-        -name README.md \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          -I{} \
-          cp \
-          {} \
-          "${SNAPCRAFT_PART_INSTALL}"/utilities
-    override-prime: 'true'
-
+  # Optional auxiliary part for displaying simple dialogs for better user experience, using Yet Another Dialog
   yad:
     after:
     - desktop-gtk3
@@ -203,18 +130,13 @@ parts:
 
   my-app-part:
     after:
-    - patches
+    - assets
 
-    # Run `snapcraft help sources` for supported keywords on pulling
-    # a part's source ingredients
     #source:
     #source-type:
     #source-tag:
     #source-depth:
 
-    # Run `snapcraft plugins` for supported helper plugins
-    # Run `snapcraft help plugins` for supported keywords on building
-    # a part
     plugin: nil
 
     override-stage: |
@@ -224,14 +146,4 @@ parts:
 
       snapcraftctl stage
 
-      find \
-        "${SNAPCRAFT_STAGE}"/share/applications \
-        -name '*.desktop' \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          sed \
-          --file "${SNAPCRAFT_STAGE}"/patches/patch-desktop-entries.sed \
-          --in-place
+      utilities/patch-desktop-entries.bash

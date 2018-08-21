@@ -13,11 +13,12 @@ set \
 # Finally run the launching command
 #my-app-command
 
-yad \
+desktop-launch \
+	yad \
 	--button='Got it' \
 	--buttons-layout=center \
 	--center \
 	--on-top \
-	--title='My Awesome Snap' \
+	--title='My Awesome App' \
 	--text='This is a demonstrative application for Snapcrafters Template Plus.\nIt indicates that the snapped application has been launched properly.' \
-	--window-icon="${SNAP}"/snap/gui/icon.png
+	--window-icon="${SNAP}"/snap/gui/my-awesome-app.png
