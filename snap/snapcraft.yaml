@@ -32,8 +32,8 @@ description: |
 
 # Just for humans, typically '1.2+git' or '1.3.2'
 # The wrapping single quotes are often required to avoid the version string
-# being accidentally interpreted as a YAML floating point number(like '1.2').
-# http://yaml.org/spec/1.2/spec.html#id2804092
+# being accidentally interpreted as a YAML non-string(like '1', '1.2').
+# http://yaml.org/type
 # https://arp242.net/weblog/yaml_probably_not_so_great_after_all.html#surprising-behaviour
 version: determined-by-version-script
 
