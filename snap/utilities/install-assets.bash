@@ -10,7 +10,7 @@ set \
 
 if ! test -v SNAPCRAFT_PART_INSTALL; then
 	printf -- \
-		"install-launchers: Error: This script should be run by \`snapcraft\` in the \`override-build\` scriptlet.\\n"
+		"install-assets: Error: This script should be run by \`snapcraft\` in the \`override-build\` scriptlet.\\n"
 	exit 1
 fi
 
