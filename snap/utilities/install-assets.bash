@@ -16,6 +16,7 @@ fi
 
 if test -d launchers; then
 	mkdir \
+		--parents \
 		--verbose \
 		"${SNAPCRAFT_PART_INSTALL}"/bin
 
@@ -36,6 +37,7 @@ fi
 
 if test -d gui; then
 	mkdir \
+		--parents \
 		"${SNAPCRAFT_PART_INSTALL}"/share/applications
 
 	find \
