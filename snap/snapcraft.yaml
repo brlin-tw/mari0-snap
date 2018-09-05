@@ -82,9 +82,27 @@ apps:
 parts:
   # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
   assets:
-    source: snap
-    source-type: local
     plugin: nil
+
+    override-pull: |
+      set \
+        -o errexit \
+        -o nounset
+
+      # Clear all files in source tree
+      rm \
+        --force \
+        --recursive \
+        --verbose \
+        * \
+        .* \
+        || true # Allow no files found
+
+      cp \
+        --recursive \
+        --verbose \
+        ../../../snap/* \
+        .
 
     override-build: |
       set \
