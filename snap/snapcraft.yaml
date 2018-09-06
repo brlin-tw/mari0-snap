@@ -114,10 +114,11 @@ parts:
     - -utilities
     - -patches
 
-  desktop-gtk3: # for yad
-
   # Optional auxiliary part for displaying simple dialogs for better user experience, using Yet Another Dialog
   yad:
+    after:
+    - desktop-gtk3
+
     plugin: nil
     stage-packages:
     - yad
