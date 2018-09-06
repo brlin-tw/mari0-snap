@@ -1,5 +1,5 @@
 # /snap/gui
-This folder holds graphical assets of the snapped application, including application icons and desktop entry.  This folder is not necessary if all of the files are available in the main source tree(which you can specify via the `icon` and `desktop` keys).
+This folder holds graphical assets of the snapped application, including application icons and desktop entries.  This folder is not necessary if all of the files are available in the main source tree or in the `/stage` directory(which you can specify via the `icon` and `desktop` keys).
 
 For third-party packaging which the snapcraft recipe is separated from the snapped application's part source tree, make a copy of the snapped application's icon here and specify it in snapcraft.yaml file using the `icon` keyword.
 

@@ -1,2 +1,2 @@
 # /snap/utilities
-Here are some utilities programs to help with snap packaging.
+Here are some utilities programs and files to help with snap packaging.
