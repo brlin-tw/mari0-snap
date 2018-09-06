@@ -125,7 +125,7 @@ parts:
 
   my-app-part:
     after:
-    - assets
+    - assets # for utilities/patch-desktop-entries
 
     #source:
     #source-type:
