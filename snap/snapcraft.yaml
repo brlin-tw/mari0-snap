@@ -48,13 +48,13 @@ version-script: ./snap/local/utilities/set-snap-version.bash
 # Use `devmode` to getting started
 # Flip to `strict` once you have the right plugs and slots,
 # or `classic` once you determine that strict confinement is not currently possible
-confinement: devmode
+confinement: strict
 
 # Snap Grade
 # Use `devel` to getting started
 # Flip to `stable` once you determine that the snap is matured, only `stable` grade
 # snaps can be promoted to `candidate` and `stable` channels
-grade: devel
+grade: stable
 
 # The path of icon to represent the snap, relative to the source tree directory
 # Only PNG or SVG image is supported, dimension must be greater than 256x256px
