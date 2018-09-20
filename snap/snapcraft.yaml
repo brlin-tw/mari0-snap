@@ -98,34 +98,11 @@ plugs:
 parts:
   # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
   assets:
-    plugin: nil
+    source: snap/local
+    plugin: dump
 
-    override-pull: |
-      set \
-        -o errexit \
-        -o nounset
+    override-build: ./utilities/install-assets.bash
 
-      # Clear all files in source tree
-      rm \
-        --force \
-        --recursive \
-        --verbose \
-        * \
-        .* \
-        || true # Allow no files found
-
-      cp \
-        --recursive \
-        --verbose \
-        ../../../snap/local/* \
-        .
-
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
-
-      ./utilities/install-assets.bash
     prime:
     - -utilities
     - -patches
