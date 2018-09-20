@@ -86,8 +86,8 @@ plugs:
   wayland:
 
   # Storage access
-  #- home:
-  #- removable-media: # Non-A/C
+  #home:
+  #removable-media: # Non-A/C
 
 #slots:
 
