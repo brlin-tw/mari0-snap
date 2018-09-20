@@ -54,7 +54,9 @@ apps:
   # via `snap run my-awesome-app.my-app-name` in the terminal.
   my-app-name:
     command: my-awesome-app-launch
-    desktop: share/applications/my-awesome-app.desktop
+    # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
+    # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
+    #desktop: share/applications/my-app-name.desktop
 
     # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
     # Interfaces - doc - snapcraft.io

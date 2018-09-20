@@ -1,4 +1,4 @@
-# Demonstration Desktop Entry for Snapcrafters Template Plus
+# A Demonstration Desktop Entry of a Snapped App.
 # Refer the Desktop Entry Specification on how to write this file:
 # https://specifications.freedesktop.org/desktop-entry-spec
 [Desktop Entry]
@@ -6,7 +6,8 @@ Version=1.0
 Type=Application
 Name=My Awesome App
 Comment=The demonstration application of Snapcrafters Template Plus
-TryExec=my-awesome-app-launch
-Exec=my-awesome-app-launch
-Icon=my-awesome-app
+Exec=my-awesome-app.my-app-name
+Icon=${SNAP}/meta/gui/icon.png
+# If my-app-name has its own icon
+#Icon=${SNAP}/meta/gui/my-app-name.png
 Categories=Development
