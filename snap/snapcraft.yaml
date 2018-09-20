@@ -53,7 +53,7 @@ apps:
   # with `my-awesome-app` or `snap run my-awesome-app`, otherwise it can only be run
   # via `snap run my-awesome-app.my-app-name` in the terminal.
   my-app-name:
-    command: my-awesome-app-launch
+    command: bin/my-awesome-app-launch
     # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
     # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
     #desktop: share/applications/my-app-name.desktop
