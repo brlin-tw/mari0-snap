@@ -44,8 +44,20 @@ version: determined-by-version-script
 version-script: ./snap/local/utilities/set-snap-version.bash
 #version-script: git -C parts/my-app-part/src describe --always --dirty --tags
 
-confinement: devmode # use 'strict' once you have the right plugs and slots
+# Security confinement
+# Use `devmode` to getting started
+# Flip to `strict` once you have the right plugs and slots,
+# or `classic` once you determine that strict confinement is not currently possible
+confinement: devmode
+
+# Snap Grade
+# Use `devel` to getting started
+# Flip to `stable` once you determine that the snap is matured, only `stable` grade
+# snaps can be promoted to `candidate` and `stable` channels
 grade: devel
+
+# The path of icon to represent the snap, relative to the source tree directory
+# Only PNG or SVG image is supported, dimension must be greater than 256x256px
 icon: snap/gui/my-awesome-app.png
 
 apps:
@@ -53,6 +65,8 @@ apps:
   # with `my-awesome-app` or `snap run my-awesome-app`, otherwise it can only be run
   # via `snap run my-awesome-app.my-app-name` in the terminal.
   my-app-name:
+    # The executable path relative to $SNAP to run the application, or a searchable
+    # command in the snap runtime's $PATH(not available in `classic` confinement)
     command: bin/my-awesome-app-launch
     # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
     # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
