@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Environment setting launcher for classic confinement snaps
+# This launcher gives priority to in-snap external command and library searching, making classic confinement snaps behave "like" strict confinement snaps.  This launcher should be dropped if the snap isn't in classic confinement.
+# 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com> © 2018
+
+set \
+	-o errexit \
+	-o errtrace \
+	-o nounset \
+	-o pipefail
+
+case "${SNAP_ARCH}" in
+	i386)
+		X_SNAP_ARCH_TRIPLET=i386-linux-gnu
+	;;
+	amd64)
+		X_SNAP_ARCH_TRIPLET=x86_64-linux-gnu
+	;;
+
+	armhf)
+		X_SNAP_ARCH_TRIPLET=arm-linux-gnueabihf
+	;;
+	arm64)
+		X_SNAP_ARCH_TRIPLET=aarch64-linux-gnu
+	;;
+	*)
+		X_SNAP_ARCH_TRIPLET="${SNAP_ARCH}"-linux-gnu
+	;;
+esac
+
+PATH="$SNAP"/usr/sbin:"$SNAP"/usr/bin:"$SNAP"/sbin:"$SNAP"/bin:"$PATH"
+
+if test -v LD_LIBRARY_PATH; then
+	LD_LIBRARY_PATH="$LD_LIBRARY_PATH":"$SNAP"/lib:"$SNAP"/usr/lib:"$SNAP"/lib/"${X_SNAP_ARCH_TRIPLET}":"$SNAP"/usr/lib/"${X_SNAP_ARCH_TRIPLET}":"$SNAP"/usr/lib/"${X_SNAP_ARCH_TRIPLET}"/mesa:"$SNAP"/usr/lib/"${X_SNAP_ARCH_TRIPLET}"/mesa-egl
+else
+	LD_LIBRARY_PATH="$SNAP"/lib:"$SNAP"/usr/lib:"$SNAP"/lib/"${X_SNAP_ARCH_TRIPLET}":"$SNAP"/usr/lib/"${X_SNAP_ARCH_TRIPLET}":"$SNAP"/usr/lib/"${X_SNAP_ARCH_TRIPLET}"/mesa:"$SNAP"/usr/lib/"${X_SNAP_ARCH_TRIPLET}"/mesa-egl
+	export LD_LIBRARY_PATH
+fi
+LD_LIBRARY_PATH="$SNAP_LIBRARY_PATH":"$LD_LIBRARY_PATH"
+
+exec "${@}"
