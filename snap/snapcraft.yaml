@@ -41,7 +41,7 @@ version: determined-by-version-script
 # , in this case the value of the `version` key will be ignored (but the key is
 # still required).
 # NOTE: The resulting version string cannot be longer than 32 characters
-version-script: ./snap/utilities/set-snap-version.bash
+version-script: ./snap/local/utilities/set-snap-version.bash
 #version-script: git -C parts/my-app-part/src describe --always --dirty --tags
 
 confinement: devmode # use 'strict' once you have the right plugs and slots
@@ -103,7 +103,7 @@ parts:
       cp \
         --recursive \
         --verbose \
-        ../../../snap/* \
+        ../../../snap/local/* \
         .
 
     override-build: |
@@ -127,7 +127,7 @@ parts:
 
   my-app-part:
     after:
-    - assets # for utilities/patch-desktop-entries
+    - assets # for /snap/local/utilities/patch-desktop-entries
 
     #source:
     #source-type:
