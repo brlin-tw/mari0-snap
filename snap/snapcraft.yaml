@@ -72,23 +72,23 @@ apps:
     # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
     #desktop: share/applications/my-app-name.desktop
 
-    # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
-    # Interfaces - doc - snapcraft.io
-    # https://forum.snapcraft.io/t/interfaces/6154
-    # Non-A/C: Non-autoconnect interface
-    plugs:
-    # For snaps with a graphical user interface:
-    - desktop
-    - desktop-legacy
-    - x11
-    - unity7
-    - wayland
+# Refer the following documentation for asserting interface plugs and slots in a security confined snap:
+# Interfaces - doc - snapcraft.io
+# https://forum.snapcraft.io/t/interfaces/6154
+# Non-A/C: Non-autoconnect interface
+plugs:
+  # For snaps with a graphical user interface:
+  desktop:
+  desktop-legacy:
+  x11:
+  unity7:
+  wayland:
 
-    # Storage access
-    #- home
-    #- removable-media # Non-A/C
+  # Storage access
+  #- home:
+  #- removable-media: # Non-A/C
 
-    #slots:
+#slots:
 
 # Run `snapcraft help sources` for supported keywords on pulling a part's source ingredients
 # Run `snapcraft plugins` for supported build helper plugins
