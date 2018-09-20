@@ -108,7 +108,7 @@ parts:
     - -utilities
     - -patches
 
-  # Optional auxiliary part for displaying simple dialogs for better user experience, using Yet Another Dialog
+  # Optional auxiliary part for displaying simple dialogs for better user experience, powered by the Yet Another Dialog
   yad:
     after:
     - desktop-gtk3
