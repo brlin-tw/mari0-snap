@@ -89,6 +89,9 @@ plugs:
   #home:
   #removable-media: # Non-A/C
 
+  # Network access
+  #network:
+
 #slots:
 
 # Run `snapcraft help sources` for supported keywords on pulling a part's source ingredients
