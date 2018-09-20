@@ -7,7 +7,7 @@ Type=Application
 Name=My Awesome App
 Comment=The demonstration application of Snapcrafters Template Plus
 Exec=my-awesome-app.my-app-name
-Icon=${SNAP}/meta/gui/icon.png
+Icon=${SNAP}/meta/gui/my-awesome-app.png
 # If my-app-name has its own icon
 #Icon=${SNAP}/meta/gui/my-app-name.png
 Categories=Development
