@@ -108,11 +108,12 @@ parts:
     - -utilities
     - -patches
 
+  # Remote part for support of various desktop technologies
+  # Refer: https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
+  desktop-gtk3: # for yad
+
   # Optional auxiliary part for displaying simple dialogs for better user experience, powered by the Yet Another Dialog
   yad:
-    after:
-    - desktop-gtk3
-
     plugin: nil
     stage-packages:
     - yad
