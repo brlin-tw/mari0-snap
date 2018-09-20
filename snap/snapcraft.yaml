@@ -60,10 +60,11 @@ grade: devel
 # Only PNG or SVG image is supported, dimension must be greater than 256x256px
 icon: snap/gui/my-awesome-app.png
 
+# Apps that are exposed by the snap package
+# If the _app_name_ is identical with the _snap_name_ it can be directly run
+# with `_snap_name_` or `snap run _snap_name_` commands, otherwise it can only be run
+# via `_snap_name_._app_name_` or `snap run _snap_name_._app_name_`
 apps:
-  # If the my-app-name is identical with the my-awesome-app it can be directly run
-  # with `my-awesome-app` or `snap run my-awesome-app`, otherwise it can only be run
-  # via `snap run my-awesome-app.my-app-name` in the terminal.
   my-app-name:
     # The executable path relative to $SNAP to run the application, or a searchable
     # command in the snap runtime's $PATH(not available in `classic` confinement)
