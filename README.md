@@ -17,8 +17,8 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Register the snap in the Snap Store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
 - [ ] Setup [build.snapcraft.io](https://build.snapcraft.io) and publish the `devmode` snap in the Snap Store edge channel
 - [ ] Add the provided Snapcraft build badge to `snap/README.md`
+- [ ] Update snap's metadata, icons and screenshots on the [dashboard](https://dashboard.snapcraft.io)
 - [ ] Add install instructions to `snap/README.md`
-- [ ] Update snap metadata, icons and screenshots on the Snap Store
 - [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link]()
 - [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
 - [ ] Publish the confined snap in the Snap store beta channel
