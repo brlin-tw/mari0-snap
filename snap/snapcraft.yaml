@@ -61,8 +61,10 @@ confinement: strict
 grade: stable
 
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
-# Interfaces - doc - snapcraft.io
+# Interface management - doc - snapcraft.io
 # https://forum.snapcraft.io/t/interfaces/6154
+# Supported interfaces - doc - snapcraft.io
+# https://forum.snapcraft.io/t/supported-interfaces/7744
 # Non-A/C: Non-autoconnect interface
 plugs:
   # For snaps with a graphical user interface:
