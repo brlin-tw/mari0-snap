@@ -1,4 +1,4 @@
-%YAML 1.2
+%YAML 1.1
 ---
 # Snapcraft Recipe for [Project]
 # ------------------------------
@@ -30,6 +30,10 @@ description: |
   we live in tweetspace and your description wants to look good in the snap
   store.
 
+# The path of icon to represent the snap, relative to the source tree directory
+# Only PNG or SVG image is supported, dimension must be greater than 256x256px
+icon: snap/gui/my-awesome-app.png
+
 # Version string just for humans, typically '1.2+git' or '1.3.2'
 # The wrapping single quotes are often required to avoid the version string
 # being accidentally interpreted as a YAML non-string(like '1', '1.2').
@@ -56,26 +60,11 @@ confinement: strict
 # snaps can be promoted to `candidate` and `stable` channels
 grade: stable
 
-# The path of icon to represent the snap, relative to the source tree directory
-# Only PNG or SVG image is supported, dimension must be greater than 256x256px
-icon: snap/gui/my-awesome-app.png
-
-# Apps that are exposed by the snap package
-# If the _app_name_ is identical with the _snap_name_ it can be directly run
-# with `_snap_name_` or `snap run _snap_name_` commands, otherwise it can only be run
-# via `_snap_name_._app_name_` or `snap run _snap_name_._app_name_`
-apps:
-  my-app-name:
-    # The executable path relative to $SNAP to run the application, or a searchable
-    # command in the snap runtime's $PATH(not available in `classic` confinement)
-    command: bin/my-awesome-app-launch
-    # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
-    # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
-    #desktop: share/applications/my-app-name.desktop
-
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
-# Interfaces - doc - snapcraft.io
+# Interface management - doc - snapcraft.io
 # https://forum.snapcraft.io/t/interfaces/6154
+# Supported interfaces - doc - snapcraft.io
+# https://forum.snapcraft.io/t/supported-interfaces/7744
 # Non-A/C: Non-autoconnect interface
 plugs:
   # For snaps with a graphical user interface:
@@ -93,6 +82,20 @@ plugs:
   #network:
 
 #slots:
+
+# Apps that are exposed by the snap package
+# If the _app_name_ is identical with the _snap_name_ it can be directly run
+# with `_snap_name_` or `snap run _snap_name_` commands, otherwise it can only be run
+# via `_snap_name_._app_name_` or `snap run _snap_name_._app_name_`
+apps:
+  my-app-name:
+    # The command to run the application, the base command should be an *relative path* to an executable file rooted from the `prime` directory (for `classic` confinement compatiblity, where command search PATHs under $SNAP isn't set for library compatiblity reasons).  The arguments are usually other launchers' *absolute path* rooted from the $SNAP environment variable that are *stacked over* previous ones to consolidate their runtime environment modifications.
+    # NOTE: The right angle bracket at the beginning of the value of the `command` keyword starts a YAML folded style block scalar, refer the following spec document for more info: http://yaml.org/spec/1.2/spec.html#id2796251
+    command: >
+      bin/my-awesome-app-launch
+    # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
+    # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
+    #desktop: share/applications/my-app-name.desktop
 
 # Run `snapcraft help sources` for supported keywords on pulling a part's source ingredients
 # Run `snapcraft plugins` for supported build helper plugins
