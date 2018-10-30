@@ -6,11 +6,11 @@
 # http://yaml.org
 # For the spec. of writing this file refer the following documentation:
 # * Snapcraft.yaml reference
-#   https://forum.snapcraft.io/t/snapcraft-yaml-reference/4276
+#   https://docs.snapcraft.io/snapcraft-yaml-reference/4276
 # * The snapcraft syntax
 #   https://docs.snapcraft.io/build-snaps/syntax
 # * Snap Docs
-#   https://snapdocs.labix.org
+#   https://docs.snapcraft.io
 # * Latest doc topics in the Snapcraft Forum
 #   https://forum.snapcraft.io/c/doc
 # For support refer to the snapcraft section in the Snapcraft Forum:
@@ -62,9 +62,9 @@ grade: stable
 
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
 # Interface management - doc - snapcraft.io
-# https://forum.snapcraft.io/t/interfaces/6154
+# https://docs.snapcraft.io/interface-management/6154
 # Supported interfaces - doc - snapcraft.io
-# https://forum.snapcraft.io/t/supported-interfaces/7744
+# https://docs.snapcraft.io/supported-interfaces/7744
 # Non-A/C: Non-autoconnect interface
 plugs:
   # For snaps with a graphical user interface:
@@ -101,7 +101,7 @@ apps:
 # Run `snapcraft plugins` for supported build helper plugins
 # Run `snapcraft help plugins` for supported keywords on building a part
 # For `override-*` scriptlets used to modify behavior of certain part's lifecycle phase, check out:
-# https://forum.snapcraft.io/t/scriptlets/4892
+# https://docs.snapcraft.io/scriptlets/4892
 parts:
   # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
   assets:
