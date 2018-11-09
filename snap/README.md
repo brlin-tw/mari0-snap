@@ -3,7 +3,7 @@
 	Use the RawGit service for easy access to in-repo pictures:
 	https://rawgit.com
 -->
-![Icon of [Project]](https://cdn.rawgit.com/Lin-Buo-Ren/snapcrafters-template-plus/bea3bc56/snap/gui/my-awesome-app.png "Icon of [Project]")
+![(Placeholder) Icon of [Project]](https://cdn.rawgit.com/Lin-Buo-Ren/snapcrafters-template-plus/bea3bc56/snap/gui/my-awesome-app.png "(Placeholder) Icon of [Project]")
 
 **This is the unofficial snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
@@ -12,7 +12,7 @@
 -->
 
 <!-- Uncomment and modify this when you have a screenshot
-![Screenshot of the Snapped Application](screenshots/screenshot.png "Screenshot of the Snapped Application")
+![Screenshot of the Snapped Application](local/screenshots/screenshot.png "Screenshot of the Snapped Application")
 -->
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
