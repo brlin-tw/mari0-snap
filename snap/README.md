@@ -1,7 +1,7 @@
 # Unofficial Snap Packaging for [Project]
 <!--
-	Use the RawGit service for easy access to in-repo pictures:
-	https://rawgit.com
+	Use the Staticaly service for easy access to in-repo pictures:
+	https://www.staticaly.com/
 -->
 ![(Placeholder) Icon of [Project]](https://cdn.rawgit.com/Lin-Buo-Ren/snapcrafters-template-plus/bea3bc56/snap/gui/my-awesome-app.png "(Placeholder) Icon of [Project]")
 
