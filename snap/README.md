@@ -36,7 +36,7 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     sudo snap connect my-awesome-app:_plug_name_
 
 ### The Graphical Way
-Browse <https://snapcraft.io/my-awesome-app> and follow the instructions.
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/my-awesome-app)
 -->
 
 <!-- Uncomment when you have test results
