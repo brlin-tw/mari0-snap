@@ -1,7 +1,14 @@
+# Version Tracking Ignore Rules for Git VCS
+# https://git-scm.com/docs/gitignore
+__pycache__
+*.pyc
+
 # Snap packaging specific rules
+/snap/.snapcraft/
 /parts/
 /stage/
 /prime/
 
 /*.snap
 /*_source.tar.bz2
+
