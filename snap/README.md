@@ -44,9 +44,7 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 * [A list of functionallities that are verified working]
 
 ## What is NOT Working...yet 
-* [A list of functionallities that are verified not working]
-
-Check out the [issue tracker](https://github.com/_repo_owner_id_/_repo_name_id_/issues) for more known issues.
+Check out the [issue tracker](https://github.com/_repo_owner_id_/_repo_name_id_/issues) for known issues.
 
 ## What is NOT Tested...yet
 * [A list of functionallities that are not tested for any reasons.]
