@@ -46,7 +46,7 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 ## The Snapcrafters
 | [![Your Name](http://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/yourname/) |
 | :----------------------------------------------------------: |
-|          [Your Name](https://github.com/yourname/)           |
+| [Your Name](https://github.com/yourname/) |
 
 --> 
 
@@ -55,6 +55,6 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 ## Upstream
 | [![Upstream Name](http://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431?s=128)](https://github.com/upstreamname) |
 | :----------------------------------------------------------: |
-|       [Upstream Name](https://github.com/upstreamname)       |
+| [Upstream Name](https://github.com/upstreamname) |
 
 -->
