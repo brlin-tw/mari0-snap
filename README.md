@@ -41,6 +41,18 @@ Finally:
 
 If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft.io).
 
+<!--
+Refer the following page for how to generate Gravatar image URL:
+
+    Developer Resources - Gravatar - Globally Recognized Avatars
+    https://en.gravatar.com/site/implement/
+
+You may generate the unique hash by using the following command in terminal:
+
+    printf username@example.com | tr '[:upper:]' '[:lower:]' | md5sum
+
+-->
+
 <!-- 
 
 ## The Snapcrafters
