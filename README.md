@@ -42,6 +42,11 @@ Finally:
 If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft.io).
 
 <!--
+Refer the following page for setting a Gravatar:
+
+    Gravatar - Globally Recognized Avatars
+    https://en.gravatar.com/
+
 Refer the following page for how to generate Gravatar image URL:
 
     Developer Resources - Gravatar - Globally Recognized Avatars
