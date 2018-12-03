@@ -114,13 +114,11 @@ parts:
 
   # Remote part for support of various desktop technologies
   # Refer: https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
-  desktop-gtk3: # for yad
+  desktop-gtk3: # for zenity
 
-  # Optional auxiliary part for displaying simple dialogs for better user experience, powered by the Yet Another Dialog
-  yad:
-    plugin: nil
-    stage-packages:
-    - yad
+  # Optional auxiliary part for displaying simple dialogs for better user experience, powered by Zenity
+  # https://forum.snapcraft.io/t/the-zenity-remote-part/8793
+  zenity:
 
   my-app-part:
     after:
