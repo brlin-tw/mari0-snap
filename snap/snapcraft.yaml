@@ -5,13 +5,11 @@
 # This file is in the YAML data serialization format:
 # http://yaml.org
 # For the spec. of writing this file refer the following documentation:
-# * Snapcraft.yaml reference
-#   https://docs.snapcraft.io/snapcraft-yaml-reference/4276
-# * The snapcraft syntax
-#   https://docs.snapcraft.io/build-snaps/syntax
-# * Snap Docs
+# * The snapcraft format
+#   https://docs.snapcraft.io/the-snapcraft-format/8337
+# * Snap Documentation
 #   https://docs.snapcraft.io
-# * Latest doc topics in the Snapcraft Forum
+# * Topics under the doc category in the Snapcraft Forum
 #   https://forum.snapcraft.io/c/doc
 # For support refer to the snapcraft section in the Snapcraft Forum:
 # https://forum.snapcraft.io/c/snapcraft
