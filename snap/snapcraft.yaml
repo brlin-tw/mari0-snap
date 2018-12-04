@@ -140,6 +140,16 @@ parts:
   # Optional auxiliary part for displaying simple dialogs for better user experience, powered by Zenity
   # https://forum.snapcraft.io/t/the-zenity-remote-part/8793
   zenity:
+    # This part or part recipe is needed until LP#1766878 is fixed
+    #
+    # Bug #1766878 “$SNAPCRAFT_PROJECT_NAME used in a remote part expands to wrong value” : Bugs : Snapcraft
+    # https://bugs.launchpad.net/snapcraft/+bug/1766878
+    configflags:
+    - --datarootdir=/snap/$SNAPCRAFT_PROJECT_NAME/current/share
+    - --disable-libnotify
+    - --disable-webkitgtk
+    organize:
+      snap/$SNAPCRAFT_PROJECT_NAME/current: /
 
   my-app-part:
     after:
