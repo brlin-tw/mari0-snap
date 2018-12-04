@@ -130,6 +130,9 @@ parts:
   # This part is only required for non GUI apps that don't uses the desktop-launch launchers
   #locales-launch:
 
+  # Remote part for recording the exact revision for each part during building
+  parts-meta-info:
+
   # Remote part for support of various desktop technologies
   # Refer: https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
   desktop-gtk3: # for zenity
