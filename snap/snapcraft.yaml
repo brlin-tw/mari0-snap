@@ -101,16 +101,30 @@ apps:
 # For `override-*` scriptlets used to modify behavior of certain part's lifecycle phase, check out:
 # https://docs.snapcraft.io/scriptlets/4892
 parts:
-  # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
-  assets:
-    source: snap/local
+  # Utility programs to help with packaging
+  utilities:
+    source: snap/local/utilities
     plugin: dump
-
-    override-build: ./utilities/install-assets.bash
-
+    organize:
+      '*': assets/utilities/
     prime:
-    - -utilities
-    - -patches
+    - -*
+
+  # Launcher programs to fix problems at runtime
+  launchers:
+    source: snap/local/launchers
+    plugin: dump
+    organize:
+      '*-launch': bin/
+
+  # Program patches to solve issues that can't be solved by tweaking in runtime
+  patches:
+    source: snap/local/patches
+    plugin: dump
+    organize:
+      '*': assets/patches/
+    prime:
+    - -*
 
   # Remote part for support of various desktop technologies
   # Refer: https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
@@ -122,7 +136,7 @@ parts:
 
   my-app-part:
     after:
-    - assets # for /snap/local/utilities/patch-desktop-entries
+    - utilities # for patch-desktop-entries.*
 
     #source:
     #source-type:
@@ -138,4 +152,4 @@ parts:
 
       snapcraftctl stage
 
-      utilities/patch-desktop-entries.bash
+      ./assets/utilities/patch-desktop-entries.bash
