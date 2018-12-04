@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This is a launcher for demonstrative purpose, it may be dropped if not used.
+# This is the maintainence launcher for the snap, make necessary runtime environment changes to make the snap work here.  You may also insert security confinement/deprecation/obsoletion notice of the snap here.
 
 set \
 	-o errexit \
@@ -7,17 +7,7 @@ set \
 	-o nounset \
 	-o pipefail
 
-# Make necessary runtime changes to make the snap work
 #export IMPORTANT_ENVIRONMENT_VARIABLE=value
 
-# Finally run the launching command
-#my-app-command
-
-desktop-launch \
-	zenity \
-	--info \
-	--ok-label='Got it' \
-	--title='My Awesome App' \
-	--text='This is a demonstrative application for Snapcrafters Template Plus.\nIt indicates that the snapped application has been launched properly.' \
-	--window-icon="${SNAP}"/snap/gui/my-awesome-app.png \
-	--width=600
+# Finally run the next part of the command chain
+exec "${@}"

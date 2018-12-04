@@ -90,7 +90,16 @@ apps:
     # The command to run the application, the base command should be an *relative path* to an executable file rooted from the `prime` directory (for `classic` confinement compatiblity, where command search PATHs under $SNAP isn't set for library compatiblity reasons).  The arguments are usually other launchers' *absolute path* rooted from the $SNAP environment variable that are *stacked over* previous ones to consolidate their runtime environment modifications.
     # NOTE: The right angle bracket at the beginning of the value of the `command` keyword starts a YAML folded style block scalar, refer the following spec document for more info: http://yaml.org/spec/1.2/spec.html#id2796251
     command: >
-      bin/my-awesome-app-launch
+      bin/desktop-launch
+      "${SNAP}"/bin/my-awesome-app-launch
+      "${SNAP}"/bin/zenity
+        --info
+        --ok-label='Got it'
+        --title='My Awesome App'
+        --text='This is a demonstrative application for Snapcrafters Template Plus.\nIt indicates that the snapped application has been launched properly.'
+        --window-icon="${SNAP}"/snap/gui/my-awesome-app.png
+        --width=600
+
     # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
     # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
     #desktop: share/applications/my-app-name.desktop
