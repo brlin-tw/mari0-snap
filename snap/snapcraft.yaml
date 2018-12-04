@@ -138,7 +138,7 @@ parts:
     after:
     - utilities # for patch-desktop-entries.*
 
-    #source:
+    source: snap/local/empty
     #source-type:
     #source-tag:
     #source-depth:
