@@ -124,7 +124,9 @@ parts:
     source: snap/local/launchers
     plugin: dump
     organize:
-      '*-launch': bin/
+      '*': bin/
+    stage:
+    - -bin/README.*
 
   # Program patches to solve issues that can't be solved by tweaking in runtime
   patches:
