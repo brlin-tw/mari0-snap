@@ -110,7 +110,7 @@ apps:
 # For `override-*` scriptlets used to modify behavior of certain part's lifecycle phase, check out:
 # https://docs.snapcraft.io/scriptlets/4892
 parts:
-  # Utility programs to help with packaging
+  # Utility programs to help with package building
   utilities:
     source: snap/local/utilities
     plugin: dump
@@ -136,6 +136,15 @@ parts:
       '*': assets/patches/
     prime:
     - -*
+
+  # Helper programs that can be called at snap runtime
+  helpers:
+    source: snap/local/helpers
+    plugin: dump
+    organize:
+      '*': bin/
+    stage:
+    - -bin/README.*
 
   # Remote part for fixing the glibc locales(and gnu gettext I18N support)
   # This part is only required for non GUI apps that don't uses the desktop-launch launchers
