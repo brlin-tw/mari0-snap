@@ -43,7 +43,7 @@ version: determined-by-version-script
 # , in this case the value of the `version` key will be ignored (but the key is
 # still required).
 # NOTE: The resulting version string cannot be longer than 32 characters
-version-script: ./snap/local/utilities/set-snap-version.bash
+version-script: ./snap/local/build-utilities/set-snap-version.bash
 #version-script: git -C parts/my-app-part/src describe --always --dirty --tags
 
 # Security confinement
@@ -111,11 +111,11 @@ apps:
 # https://docs.snapcraft.io/scriptlets/4892
 parts:
   # Utility programs to help with package building
-  utilities:
-    source: snap/local/utilities
+  build-utilities:
+    source: snap/local/build-utilities
     plugin: dump
     organize:
-      '*': assets/utilities/
+      '*': assets/build-utilities/
     prime:
     - -*
 
@@ -173,7 +173,7 @@ parts:
 
   my-app-part:
     after:
-    - utilities # for patch-desktop-entries.*
+    - build-utilities # for patch-desktop-entries.*
 
     source: snap/local/empty
     #source-type:
@@ -189,4 +189,4 @@ parts:
 
       snapcraftctl stage
 
-      ./assets/utilities/patch-desktop-entries.bash
+      ./assets/build-utilities/patch-desktop-entries.bash
