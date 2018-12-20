@@ -40,7 +40,7 @@ If the upstream rejects the offer:
 
 Finally:
 
-* [ ] Ask the Snap Advocacy team to celebrate the snap - [explanation](<https://forum.snapcraft.io/t/what-is-ask-the-snap-advocacy-team-to-celebrate-the-snap/8808/7) -  [link]()
+* [ ] Ask the Snap Advocacy team to celebrate the snap - [explanation](https://forum.snapcraft.io/t/what-is-ask-the-snap-advocacy-team-to-celebrate-the-snap/8808/7) -  [link]()
 
 If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft.io).
 
