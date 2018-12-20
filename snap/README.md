@@ -21,18 +21,18 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 ## Installation
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
-### In Terminal
-    # Install Snap #
+### In a Terminal
+    # Install the snap #
     sudo snap install --channel=edge --devmode my-awesome-app
     #sudo snap install --channel=beta my-awesome-app
     #sudo snap install my-awesome-app
     
-    # Connect the Snap to Required Interfaces #
-    ## _plug_name_: Reasoning of connecting _plug_name_ ##
+    # Connect the snap to essential security confinement interfaces #
+    ## (Proper reasoning for connecting _plug_name_) ##
     sudo snap connect my-awesome-app:_plug_name_
     
-    # Connect the Snap to Optional Interfaces #
-    ## _plug_name_: Reasoning of connecting _plug_name_ ##
+    # Connect the snap to optional security confinement interfaces #
+    ## (Proper reasoning for connecting _plug_name_) ##
     sudo snap connect my-awesome-app:_plug_name_
 
 ### The Graphical Way
