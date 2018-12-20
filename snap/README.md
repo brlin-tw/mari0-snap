@@ -34,6 +34,10 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     # Connect the snap to optional security confinement interfaces #
     ## (Proper reasoning for connecting _plug_name_) ##
     sudo snap connect my-awesome-app:_plug_name_
+    
+    # Launch the application #
+    my-awesome-app
+    snap run my-awesome-app # If you have another existing installation
 
 ### The Graphical Way
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/my-awesome-app)
