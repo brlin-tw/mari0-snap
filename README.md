@@ -21,7 +21,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Add install instructions to `snap/README.md`
 - [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link]()
 - [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
-- [ ] Publish the confined snap in the Snap store beta channel
+- [ ] Publish the confined snap in the Snap Store beta channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Call-for-Testing-Template) - [link]()
 - [ ] Publish the snap in the Snap Store stable channel
