@@ -1,6 +1,6 @@
 %YAML 1.1
 ---
-# Snapcraft Recipe for [Project]
+# Snapcraft Recipe for Mari0
 # ------------------------------
 # This file is in the YAML data serialization format:
 # http://yaml.org
@@ -13,57 +13,32 @@
 #   https://forum.snapcraft.io/c/doc
 # For support refer to the snapcraft section in the Snapcraft Forum:
 # https://forum.snapcraft.io/c/snapcraft
-
-# All following comments, including this one, are designed to be stripped
-# before contributing the recipe to the upstream
-
-# my-awesome-app, my-app-name, my-app-command, my-app-launch, my-app-part
-# are placeholders text meant to be replaced by appropriate content
-
-name: my-awesome-app
-summary: Single-line elevator pitch for your amazing snap under 79 chars.
+name: mari0
+summary: Mario + Portal platformer
 description: |
-  This is my-awesome-app's description. You have a paragraph or two to tell
-  the most important story about your snap. Keep it under 100 words though,
-  we live in tweetspace and your description wants to look good in the snap
-  store.
+  Two genre defining games from completely different eras: Nintendo's Super Mario Bros. and Valve's Portal. These two games managed to give Platformers and First-Person Puzzle Games a solid place in the video game world. But what if Nintendo teamed up with Valve and recreated the famous Mario game with Portal gun mechanics?
 
-# The path of icon to represent the snap, relative to the source tree directory
-# Only PNG or SVG image is supported, dimension must be greater than 256x256px
-icon: snap/gui/my-awesome-app.png
+  A complete from scratch recreation of Super Mario Bros. with a focus on perfectly imitating the feel the 1985 classic gave us. Then give Mario a portal gun, add puzzle game mechanics from Portal and there you go. And if that wasn't crazy enough, play 4-player coop, with everyone having their own Portal gun!
 
-# Version string just for humans, typically '1.2+git' or '1.3.2'
-# The wrapping single quotes are often required to avoid the version string
-# being accidentally interpreted as a YAML non-string(like '1', '1.2').
-# http://yaml.org/type
-# https://arp242.net/weblog/yaml_probably_not_so_great_after_all.html#surprising-behaviour
+  ## Features ##
+  -   Complete recreation of SMB
+  -   Elements from Portal
+  -   Portal gun that shoots portals
+  -   4-player simultaneous coop
+  -   Level Editor that was used to create the levels in the game
+  -   33 different hats
+  -   Downloadable Mappacks
+  -   Game modifiers for extra fun
+
+  NOTE: This is NOT an official Mari0 distribution, refer the [issue tracker](https://github.com/Lin-Buo-Ren/mari0-snap/issues) for more details
+
+icon: snap/gui/mari0-icon.256px.scaled.png
 version: determined-by-version-script
-
-# (OPTIONAL) The version string can also be dynamically determined via scripting
-# , in this case the value of the `version` key will be ignored (but the key is
-# still required).
-# NOTE: The resulting version string cannot be longer than 32 characters
 version-script: ./snap/local/build-utilities/set-snap-version.bash
-#version-script: git -C parts/my-app-part/src describe --always --dirty --tags
 
-# Security confinement
-# Use `devmode` to getting started
-# Flip to `strict` once you have the right plugs and slots,
-# or `classic` once you determine that strict confinement is not currently possible
 confinement: strict
-
-# Snap Grade
-# Use `devel` to getting started
-# Flip to `stable` once you determine that the snap is matured, only `stable` grade
-# snaps can be promoted to `candidate` and `stable` channels
 grade: stable
 
-# Refer the following documentation for asserting interface plugs and slots in a security confined snap:
-# Interface management - doc - snapcraft.io
-# https://docs.snapcraft.io/interface-management/6154
-# Supported interfaces - doc - snapcraft.io
-# https://docs.snapcraft.io/supported-interfaces/7744
-# Non-A/C: Non-autoconnect interface
 plugs:
   # For snaps with a graphical user interface:
   desktop:
@@ -79,36 +54,6 @@ plugs:
   # Network access
   #network:
 
-#slots:
-
-# Apps that are exposed by the snap package
-# If the _app_name_ is identical with the _snap_name_ it can be directly run
-# with `_snap_name_` or `snap run _snap_name_` commands, otherwise it can only be run
-# via `_snap_name_._app_name_` or `snap run _snap_name_._app_name_`
-apps:
-  my-app-name:
-    # The command to run the application, the base command should be an *relative path* to an executable file rooted from the `prime` directory (for `classic` confinement compatiblity, where command search PATHs under $SNAP isn't set for library compatiblity reasons).  The arguments are usually other launchers' *absolute path* rooted from the $SNAP environment variable that are *stacked over* previous ones to consolidate their runtime environment modifications.
-    # NOTE: The right angle bracket at the beginning of the value of the `command` keyword starts a YAML folded style block scalar, refer the following spec document for more info: http://yaml.org/spec/1.2/spec.html#id2796251
-    command: >
-      bin/desktop-launch
-      "${SNAP}"/bin/my-awesome-app-launch
-      "${SNAP}"/bin/zenity
-        --info
-        --ok-label='Got it'
-        --title='My Awesome App'
-        --text='This is a demonstrative application for Snapcrafters Template Plus.\nIt indicates that the snapped application has been launched properly.'
-        --window-icon="${SNAP}"/snap/gui/my-awesome-app.png
-        --width=600
-
-    # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
-    # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
-    #desktop: share/applications/my-app-name.desktop
-
-# Run `snapcraft help sources` for supported keywords on pulling a part's source ingredients
-# Run `snapcraft plugins` for supported build helper plugins
-# Run `snapcraft help plugins` for supported keywords on building a part
-# For `override-*` scriptlets used to modify behavior of certain part's lifecycle phase, check out:
-# https://docs.snapcraft.io/scriptlets/4892
 parts:
   # Utility programs to help with package building
   build-utilities:
@@ -171,7 +116,7 @@ parts:
     organize:
       snap/$SNAPCRAFT_PROJECT_NAME/current: /
 
-  my-app-part:
+  mari0:
     after:
     - build-utilities # for patch-desktop-entries.*
 
@@ -190,3 +135,22 @@ parts:
       snapcraftctl stage
 
       ./assets/build-utilities/patch-desktop-entries.bash
+
+apps:
+  mari0:
+    # The command to run the application, the base command should be an *relative path* to an executable file rooted from the `prime` directory (for `classic` confinement compatiblity, where command search PATHs under $SNAP isn't set for library compatiblity reasons).  The arguments are usually other launchers' *absolute path* rooted from the $SNAP environment variable that are *stacked over* previous ones to consolidate their runtime environment modifications.
+    # NOTE: The right angle bracket at the beginning of the value of the `command` keyword starts a YAML folded style block scalar, refer the following spec document for more info: http://yaml.org/spec/1.2/spec.html#id2796251
+    command: >
+      bin/desktop-launch
+      "${SNAP}"/bin/mari0-launch
+      "${SNAP}"/bin/zenity
+        --info
+        --ok-label='Got it'
+        --title='My Awesome App'
+        --text='This is a demonstrative application for Snapcrafters Template Plus.\nIt indicates that the snapped application has been launched properly.'
+        --window-icon="${SNAP}"/snap/gui/mari0.png
+        --width=600
+
+    # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
+    # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
+    #desktop: share/applications/mari0.desktop
