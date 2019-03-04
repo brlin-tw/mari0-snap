@@ -68,24 +68,6 @@ parts:
     stage:
     - -bin/README.*
 
-  # Program patches to solve issues that can't be solved by tweaking in runtime
-  patches:
-    source: snap/local/patches
-    plugin: dump
-    organize:
-      '*': assets/patches/
-    prime:
-    - -*
-
-  # Helper programs that can be called at snap runtime
-  helpers:
-    source: snap/local/helpers
-    plugin: dump
-    organize:
-      '*': bin/
-    stage:
-    - -bin/README.*
-
   mari0:
     source: https://github.com/Stabyourself/mari0.git
     source-depth: 10
