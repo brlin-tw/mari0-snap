@@ -7,9 +7,7 @@
 
 **This is the unofficial snap for Mari0**, *"Mario + Portal platformer"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
-<!-- Uncomment and modify this when you are provided a build status badge
 [![Build Status Badge of the `mari0` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/mari0-snap.svg "Build Status of the `mari0` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/mari0-snap)
--->
 
 ![Screenshot of the Snapped Application](local/screenshots/main.png "Screenshot of the Snapped Application")
 
