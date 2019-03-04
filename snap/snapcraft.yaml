@@ -82,7 +82,7 @@ parts:
   love:
     plugin: nil
     stage-snaps:
-    - love-brlin/latest/edge
+    - love-brlin
 
 apps:
   mari0:
