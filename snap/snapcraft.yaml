@@ -14,6 +14,7 @@
 # For support refer to the snapcraft section in the Snapcraft Forum:
 # https://forum.snapcraft.io/c/snapcraft
 name: mari0
+title: Mari0 (UNOFFICIAL)
 summary: Mario + Portal platformer
 description: |
   Two genre defining games from completely different eras: Nintendo's Super Mario Bros. and Valve's Portal. These two games managed to give Platformers and First-Person Puzzle Games a solid place in the video game world. But what if Nintendo teamed up with Valve and recreated the famous Mario game with Portal gun mechanics?
@@ -33,26 +34,13 @@ description: |
   NOTE: This is NOT an official Mari0 distribution, refer the [issue tracker](https://github.com/Lin-Buo-Ren/mari0-snap/issues) for more details
 
 icon: snap/gui/mari0-icon.256px.scaled.png
-version: determined-by-version-script
-version-script: ./snap/local/build-utilities/set-snap-version.bash
+version: 1.6.2
+#version: determined-by-version-script
+#version-script: ./snap/local/build-utilities/set-snap-version.bash
 
+base: core18
 confinement: strict
 grade: stable
-
-plugs:
-  # For snaps with a graphical user interface:
-  desktop:
-  desktop-legacy:
-  x11:
-  unity7:
-  wayland:
-
-  # Storage access
-  #home:
-  #removable-media: # Non-A/C
-
-  # Network access
-  #network:
 
 parts:
   # Utility programs to help with package building
@@ -91,66 +79,59 @@ parts:
     stage:
     - -bin/README.*
 
-  # Remote part for fixing the glibc locales(and gnu gettext I18N support)
-  # This part is only required for non GUI apps that don't uses the desktop-launch launchers
-  #locales-launch:
-
-  # Remote part for recording the exact revision for each part during building
-  parts-meta-info:
-
-  # Remote part for support of various desktop technologies
-  # Refer: https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
-  desktop-gtk3: # for zenity
-
-  # Optional auxiliary part for displaying simple dialogs for better user experience, powered by Zenity
-  # https://forum.snapcraft.io/t/the-zenity-remote-part/8793
-  zenity:
-    # This part or part recipe is needed until LP#1766878 is fixed
-    #
-    # Bug #1766878 “$SNAPCRAFT_PROJECT_NAME used in a remote part expands to wrong value” : Bugs : Snapcraft
-    # https://bugs.launchpad.net/snapcraft/+bug/1766878
-    configflags:
-    - --datarootdir=/snap/$SNAPCRAFT_PROJECT_NAME/current/share
-    - --disable-libnotify
-    - --disable-webkitgtk
-    organize:
-      snap/$SNAPCRAFT_PROJECT_NAME/current: /
-
   mari0:
-    after:
-    - build-utilities # for patch-desktop-entries.*
+    source: https://github.com/Stabyourself/mari0/archive/1.6.2.tar.gz
+    #source: https://github.com/Stabyourself/mari0.git
+    #source-depth: 30
 
-    source: snap/local/empty
-    #source-type:
+    # For building stable releases
     #source-tag:
-    #source-depth:
 
+    plugin: dump
+    organize:
+      '*': mari0/
+
+  love:
     plugin: nil
-
-    override-stage: |
-      set \
-        -o errexit \
-        -o nounset
-
-      snapcraftctl stage
-
-      ./assets/build-utilities/patch-desktop-entries.bash
+    stage-snaps:
+    - love-brlin/latest/edge
 
 apps:
   mari0:
-    # The command to run the application, the base command should be an *relative path* to an executable file rooted from the `prime` directory (for `classic` confinement compatiblity, where command search PATHs under $SNAP isn't set for library compatiblity reasons).  The arguments are usually other launchers' *absolute path* rooted from the $SNAP environment variable that are *stacked over* previous ones to consolidate their runtime environment modifications.
-    # NOTE: The right angle bracket at the beginning of the value of the `command` keyword starts a YAML folded style block scalar, refer the following spec document for more info: http://yaml.org/spec/1.2/spec.html#id2796251
-    command: >
-      bin/desktop-launch
-      "${SNAP}"/bin/mari0-launch
-      "${SNAP}"/bin/zenity
-        --info
-        --ok-label='Got it'
-        --title='My Awesome App'
-        --text='This is a demonstrative application for Snapcrafters Template Plus.\nIt indicates that the snapped application has been launched properly.'
-        --window-icon="${SNAP}"/snap/gui/mari0.png
-        --width=600
+    adapter: full
+    command: bin/love $SNAP/mari0
+    command-chain:
+    - bin/workaround-snap-arch-triplet-launch
+    - bin/locales-launch
+    - bin/love-launch
+    - bin/mari0-launch
+    environment:
+      LANG: C.UTF-8
+      LANGUAGE: C.UTF-8
 
-    # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
-    # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
-    #desktop: share/applications/mari0.desktop
+plugs:
+  # For snaps with a graphical user interface:
+  desktop:
+  desktop-legacy:
+  x11:
+  unity7:
+  wayland:
+
+  # Storage access
+  home:
+  removable-media: # Non-A/C
+
+  # Joystick access
+  joystick:
+
+  # Graphics rendering
+  opengl:
+
+  # Audio
+  pulseaudio:
+
+  # For inhibiting screensavor
+  screen-inhibit-control:
+
+  # Network access may be required by some games
+  network:
