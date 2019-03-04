@@ -35,9 +35,8 @@ description: |
 
 icon: snap/gui/mari0-icon.256px.scaled.png
 license: MIT
-version: 1.6.2
-#version: determined-by-version-script
-#version-script: ./snap/local/build-utilities/set-snap-version.bash
+version: determined-by-version-script
+version-script: ./snap/local/build-utilities/set-snap-version.bash
 
 base: core18
 confinement: strict
