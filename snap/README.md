@@ -30,13 +30,13 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 ### The Graphical Way
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/mari0)
 
-<!-- Uncomment when you have test results
 ## What is Working
-* [A list of functionallities that are verified working]
+* Launch
+* Keyboard & mouse gameplay
+* External mappacks
 
 ## What is NOT Working...yet 
 Check out the [issue tracker](https://github.com/Lin-Buo-Ren/mari0-snap/issues) for known issues.
--->
 
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
