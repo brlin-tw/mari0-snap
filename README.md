@@ -19,7 +19,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Add the provided Snapcraft build badge to `snap/README.md`
 - [x] Update snap's metadata, icons and screenshots on the [dashboard](https://dashboard.snapcraft.io)
 - [x] Add install instructions to `snap/README.md`
-- [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link]()
+- [x] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link](https://github.com/Stabyourself/mari0/issues/22)
 - [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
 - [ ] Publish the confined snap in the Snap Store beta channel
 - [ ] Update the install instructions in `snap/README.md`
