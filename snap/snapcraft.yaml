@@ -34,6 +34,7 @@ description: |
   NOTE: This is NOT an official Mari0 distribution, refer [the snap's issue tracker](https://github.com/Lin-Buo-Ren/mari0-snap/issues) for more details
 
 icon: snap/gui/mari0-icon.256px.scaled.png
+license: MIT
 version: 1.6.2
 #version: determined-by-version-script
 #version-script: ./snap/local/build-utilities/set-snap-version.bash
