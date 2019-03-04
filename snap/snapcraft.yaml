@@ -31,7 +31,7 @@ description: |
   -   Downloadable Mappacks
   -   Game modifiers for extra fun
 
-  NOTE: This is NOT an official Mari0 distribution, refer the [issue tracker](https://github.com/Lin-Buo-Ren/mari0-snap/issues) for more details
+  NOTE: This is NOT an official Mari0 distribution, refer [the snap's issue tracker](https://github.com/Lin-Buo-Ren/mari0-snap/issues) for more details
 
 icon: snap/gui/mari0-icon.256px.scaled.png
 version: 1.6.2
