@@ -81,12 +81,11 @@ parts:
     - -bin/README.*
 
   mari0:
-    source: https://github.com/Stabyourself/mari0/archive/1.6.2.tar.gz
-    #source: https://github.com/Stabyourself/mari0.git
-    #source-depth: 30
+    source: https://github.com/Stabyourself/mari0.git
+    source-depth: 10
 
     # For building stable releases
-    #source-tag:
+    source-tag: 1.6.2
 
     plugin: dump
     organize:
