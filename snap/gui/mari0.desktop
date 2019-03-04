@@ -7,4 +7,4 @@ Name=Mari0
 Comment=Mario + Portal platformer
 Exec=mari0
 Icon=${SNAP}/meta/gui/mari0-icon.256px.scaled.png
-Categories=Development
+Categories=Game;ArcadeGame
