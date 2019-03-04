@@ -106,9 +106,6 @@ apps:
     - bin/locales-launch
     - bin/love-launch
     - bin/mari0-launch
-    environment:
-      LANG: C.UTF-8
-      LANGUAGE: C.UTF-8
 
 plugs:
   # For snaps with a graphical user interface:
