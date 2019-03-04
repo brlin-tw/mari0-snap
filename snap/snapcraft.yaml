@@ -73,7 +73,7 @@ parts:
     source-depth: 10
 
     # For building stable releases
-    source-tag: 1.6.2
+    #source-tag: 1.6.2
 
     plugin: dump
     organize:
